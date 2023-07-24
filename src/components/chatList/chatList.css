@@ -1,0 +1,43 @@
+.chatList-container{
+    flex: 4;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 1px solid black;
+}
+.chatList{
+    padding:  50px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatList-profile-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chatList-profile-name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.chatList-newMessage-icon{
+    font-size: 1.8rem;
+    
+}
+.chatList-category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hilight-color{
+    color: #0095f6;
+}
+.hilight-color:hover{
+    color: #000;
+    cursor: pointer;
+}
+.recent-chatList{
+    margin-top: 20px;
+}

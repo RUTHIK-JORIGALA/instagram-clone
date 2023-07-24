@@ -1,0 +1,18 @@
+.recent-chat{
+    margin-top: 10px;
+    width: 90px;
+    display: flex;
+}
+.recentChat-profile-pic{
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.recentChat-profile-details h3{
+    margin: 3px;
+}
+.recentChat-profile-details p{
+    color: gray;
+}

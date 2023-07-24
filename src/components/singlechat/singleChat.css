@@ -1,0 +1,74 @@
+.singleChat-container{
+    flex: 7;
+    padding: 15px 10px;
+
+}
+.singleChat{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+.singleChat-top{
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    position: fixed;
+    background-color: #fff;
+}
+.singleChat-top-profile{
+    display: flex;
+    align-items: center;
+}
+
+.singleChat-profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.singleChat-connection-icons{
+    display: flex;
+    gap:1.05rem;
+
+}
+.singleChat-icons{
+    font-size: 1.8rem;
+}
+/* conversation */
+
+.singleChat-conversation{
+    height: 100vh;
+    /* background-color: blue; */
+}
+
+.singleChat-bottom{
+    position: fixed;
+    width: 50%;
+    bottom: 2px;
+}
+.singleChat-input{
+    width: 95%;
+    height: 30px;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    padding: 5px 50px ;
+    border-color: lightgray;
+}
+.singleChat-input:focus{
+    outline: none;
+}
+.singleChat-inputIcons{
+    position: absolute;
+    right: 0;
+    top: 15%;
+    display: flex;
+    gap: 10px;
+}
+.singleChat-inputIcons-emoji{
+    position: absolute;
+    left: 2%;
+    top: 15%;
+}

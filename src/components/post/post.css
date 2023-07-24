@@ -1,0 +1,98 @@
+/* .post-container{
+    margin-bottom: 5px;
+} */
+p{
+    margin: 0;
+}
+
+h3{
+    margin: 5px 0;
+}
+.post{
+    text-align: left;
+    
+}
+.post-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.post-option-icon{
+    padding-right: 5px;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.post-profile{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    
+}
+
+.post-profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    padding: 2px;
+    cursor: pointer;
+    /* margin-right: 8px; */
+}
+.post-profile-title{
+    cursor: pointer;
+}
+.dot{
+    width: 7px;
+    height: 7px;
+    background-color: gray;
+    border-radius: 50%;
+}
+.person-active-time{
+    color: gray;
+    cursor: pointer;
+    /* font-weight: bold; */
+}
+
+.post-image{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.post-reactions{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.post-reactions-icons{
+    display: flex;
+    gap:1.2rem;
+}
+
+.post-reaction-icon{
+    font-size: 1.8rem;
+}
+
+.post-description{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.more, .show-comments{
+    color: gray;
+}
+
+.input-comment{
+    border: none;
+    width: 100%;
+}
+.input-comment:focus{
+    outline: none;
+}
+.input-comment::placeholder{
+    font-size: 1rem;
+}

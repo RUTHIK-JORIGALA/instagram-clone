@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import './App.css';
+import Header from './pages/header/Header';
+import Home from './pages/home/Home';
+import Search from './pages/search/Search';
+import Explore from './pages/explore/Explore';
+import Reels from './pages/reels/Reels';
+import Messages from './pages/messages/Messages';
+import Notifications from './pages/notification/Notifications';
+import Create from './pages/create/Create';
+import Profile from './pages/profile/Profile';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter className="app_main">
+        <Header/>
+        <Routes className="center_elements">
+          <Route path='/' element={<Home/>}/>
+          <Route path='/search' element={<Search/>}/>
+          <Route path='/explore' element={<Explore/>}/>
+          <Route path='/reels' element={<Reels/>}/>
+          <Route path='/messages' element={<Messages/>}/>
+          <Route path='/notifications' element={<Notifications/>}/>
+          <Route path='/create' element={<Create/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

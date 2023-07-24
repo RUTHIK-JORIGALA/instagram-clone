@@ -1,0 +1,33 @@
+.noMessages{
+    
+    flex: 7;
+    height: 100vh;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.noMessages p{
+    color: gray;
+}
+.noMessages h3{
+    font-weight: 400;
+}
+.messenger-icon-container{
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 15px;
+}
+.messenger-icon-noMsg{
+    font-size: 90px;
+}
+
+.noMessage-send-btn{
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+}

@@ -1,0 +1,48 @@
+.profileTop-container{
+
+    height: 25vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 50px 150px;
+    font-size: 1.3rem;
+    
+}
+.profile-display-container{
+    height: 230px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-dispaly-picture{
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+    border-radius: 50%;
+}
+.person-activity-container{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.person-activity-top{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 15px;
+}
+.person-activity-middle{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 15px;
+}
+.editProfile-container, .viewArchieve-container{
+    background-color: rgba(211, 211, 211, 0.695);
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+.userName-container h6{
+    margin: 0;
+}

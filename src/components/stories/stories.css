@@ -1,0 +1,4 @@
+.stories{
+    display: flex;
+    overflow-x:scroll;
+}

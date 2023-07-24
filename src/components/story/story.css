@@ -1,0 +1,27 @@
+
+.story{
+    width: 110px;
+    height: 122px;
+    margin-bottom: 50px;
+}
+.story-figure{
+    
+
+}
+.story-image-container{
+    /* border: 2px solid black; */
+}
+.story-image{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    border: 2px solid crimson;
+    padding: 1px;
+}
+.figcaption{
+    text-align: center;
+}
+::-webkit-scrollbar{
+    display: none;
+}
