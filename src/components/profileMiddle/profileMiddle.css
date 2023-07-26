@@ -1,0 +1,40 @@
+.hilights-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.highlights-cover-image{
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    border: 1px solid gray;
+    
+}
+.highlights{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.addHighlight{
+    height: 90px;
+    width: 90px;
+    /* background-color: lightgray; */
+    border-radius: 50% ;
+    border: 1px solid gray;
+    /* padding: 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+.addHighlight-icon{
+    font-size: 5rem;
+    color: gray;
+    cursor: pointer;
+
+}

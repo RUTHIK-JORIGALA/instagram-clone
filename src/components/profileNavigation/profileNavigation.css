@@ -1,0 +1,44 @@
+.profileNavigation-container{
+    display: flex;
+    justify-content:center;
+    
+    gap: 2rem;
+}
+.profileNavigation{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileNavigation-title{
+    font-weight: 600;
+    color: gray;
+}
+.navlink{
+    position: relative;
+}
+.profileNavigation.active::before{
+    content: "";
+    position: absolute;
+    top:-45% ;
+    left: 0;
+    height: 2px;
+    background-color: black;
+    width: 5rem;
+}
+
+/* profilepost */
+
+
+.profilePost-container{
+    margin: 10px 2rem;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0.6rem;
+}
+.profilePost-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
