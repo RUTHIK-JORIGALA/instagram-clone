@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import {BsInstagram ,BsMessenger , BsFillPlusSquareFill} from 'react-icons/bs';
+import {BsInstagram ,BsMessenger , BsFillPlusSquareFill } from 'react-icons/bs';
 import {BiSearch , BiSolidMoviePlay} from 'react-icons/bi'
 import {GoHome , GoHomeFill} from 'react-icons/go';
-import {ImCompass2} from 'react-icons/im';
-import {GrMultimedia} from 'react-icons/gr';
+// import {ImCompass2} from 'react-icons/im';
+// import {GrMultimedia} from 'react-icons/gr';
 import {AiOutlineHeart , AiFillHeart} from 'react-icons/ai';
-import {CgAddR} from 'react-icons/cg';
+// import {CgAddR} from 'react-icons/cg';
 import {MdExplore} from 'react-icons/md';
 import {FaMagnifyingGlass} from 'react-icons/fa6'
 import './header.css';
 import { NavLink } from 'react-router-dom';
 const Header = () => {
+
+  const fetchingData = async () =>{
+    const resData = await fetch("http://localhost:5000/");
+    const Data = await resData.json();
+    console.log(Data);
+  }
+
+  useEffect(()=>{
+    fetchingData();
+  },[])
+
   return (
     <div className='header'> 
       <div className="header-inner">
