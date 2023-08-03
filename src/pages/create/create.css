@@ -1,0 +1,23 @@
+
+.create-container{
+    height: 100vh;
+    max-width: 30vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 1px 8px 0.1px;
+    border-radius: 1rem;
+     
+}
+
+input[type="file"] {
+    /* display: none; */
+    border: none;
+    /* background-color: green; */
+}

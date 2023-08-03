@@ -23,7 +23,7 @@ function App() {
         </div>
         <div className="body-section">
           <Header/>
-          <Routes className="center_elements">
+          <Routes className="center-elements">
             <Route path='/' element={<Home/>}/>
             <Route path='/search' element={<Search/>}/>
             <Route path='/explore' element={<Explore/>}/>

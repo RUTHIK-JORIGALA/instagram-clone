@@ -18,8 +18,8 @@
 .profile-dispaly-picture{
     width: 180px;
     height: 180px;
-    background-size: cover;
     border-radius: 50%;
+    object-fit: cover;
 }
 .person-activity-container{
     max-width: 600px;
