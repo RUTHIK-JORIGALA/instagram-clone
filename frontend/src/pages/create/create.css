@@ -1,0 +1,48 @@
+
+.create-container{
+    height: 100vh;
+    max-width: 30vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+.create{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 1px 8px 0.1px;
+    border-radius: 1rem;
+    padding: 10px 0;
+     
+}
+
+input[type="file"] {
+    /* display: none; */
+    border: none;
+    /* background-color: green; */
+}
+.create-post-caption{
+    width: 90%;
+    box-sizing: border-box;
+}
+.create-post-btn{
+    width: 90%;
+    background-color:#3f3f3f ;
+    color: #fff;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 0;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    transition: 0.2s ease-in-out;
+    
+}
+.create-post-btn:hover{
+    cursor: pointer;
+    background-color: cornflowerblue;
+    color: #fff;
+}
