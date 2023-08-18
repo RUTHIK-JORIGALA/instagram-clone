@@ -7,7 +7,8 @@ const Feed = () => {
   useEffect(()=>{
     fetch('http://localhost:5000/allposts',{
       headers:{
-        "Authorization" : "bearer "+localStorage.getItem('jwt')
+        "Authorization" : "bearer "+localStorage.getItem('jwt'),
+        // "Content-Type":"application/json"
       }
     })
     .then(res =>res.json())
@@ -15,12 +16,14 @@ const Feed = () => {
     .catch(err => console.log(err))
   },[])
 
+
+
   return (
     <section className='feed'>
       {/* <Post/> */}
       {
-      data.map((curpost)=>{
-        return <Post posts= {curpost}/>
+      data.map((curpost, index)=>{
+        return <Post key={index} posts= {curpost} data={data} setData={setData}/>
       })
       }
       

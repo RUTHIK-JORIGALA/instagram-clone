@@ -16,17 +16,18 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { loginContext } from './components/context/LoginContext';
 import { useState } from 'react';
+import LogoutModal from './components/modal/LogoutModal';
+
 function App() {
   const [userLogin , setUserLogin] = useState(false)
-  
-
+  const [logoutModalOpen , setLogoutModalOpen] = useState(false);
   return (
     <div className="App">
       <BrowserRouter className="app_main">
         <div className="head-section">
         </div>
         <div className="body-section">
-          <loginContext.Provider value={{setUserLogin}}>
+          <loginContext.Provider value={{setUserLogin , setLogoutModalOpen}}>
           <Header login={userLogin}/>
           <Routes className="center-elements">
             <Route path='/' element={<Home/>}/>
@@ -41,6 +42,10 @@ function App() {
             <Route path='/signup' element={<SignUp/>}/>
           </Routes>
           <ToastContainer/>
+          {
+            logoutModalOpen && <LogoutModal setLogoutModalOpen={setLogoutModalOpen}/>
+          }
+          
           </loginContext.Provider>
         </div>
         

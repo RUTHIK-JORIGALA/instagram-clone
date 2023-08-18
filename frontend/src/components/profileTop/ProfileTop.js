@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './profileTop.css';
-import {FiSettings} from 'react-icons/fi'
+import {FiSettings} from 'react-icons/fi';
+import { loginContext } from '../context/LoginContext';
 const ProfileTop = () => {
+    const {setLogoutModalOpen} = useContext(loginContext)
   return (
     <section>
       <div className="profileTop-container">
@@ -9,9 +11,10 @@ const ProfileTop = () => {
             <img src='./Images/profile.jpg' alt='profile' className='profile-dispaly-picture'/>
         </div>
         <div className="person-activity-container">
+            {/* <h1>{JSON.parse(localStorage.getItem("user")).name}</h1> */}
             <div className='person-activity-top'>
                 <div className="userId-container">
-                    <p>ankam_hemanth</p>
+                    <p>{JSON.parse(localStorage.getItem("user")).name}</p>
                 </div>
                 <div className="editProfile-container">
                     <p>Edit profile</p>
@@ -35,7 +38,8 @@ const ProfileTop = () => {
                 </div>
             </div>
             <div className='userName-container'>
-                <h6>Ankam Hemanth</h6>
+                <h6>{JSON.parse(localStorage.getItem("user")).userName}</h6>
+                <button className='logout-btn' onClick={()=>setLogoutModalOpen(true)}>Logout</button>
             </div>
         </div>
       </div>

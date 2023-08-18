@@ -1,14 +1,67 @@
 
 import './post.css';
 import {BsThreeDots} from 'react-icons/bs';
-import {AiOutlineHeart} from 'react-icons/ai';
+import {AiOutlineHeart ,AiFillHeart} from 'react-icons/ai';
 import {FaRegComment} from 'react-icons/fa';
 import {ImCompass} from 'react-icons/im';
 import {BiBookmark} from 'react-icons/bi';
-const Post = ({posts}) => {
+import { json } from 'react-router';
+const Post = ({posts,data , setData}) => {
 // console.log(posts.photo)
-const {photo} = posts
-console.log(photo)
+const {photo , _id} = posts
+// console.log(posts)
+
+const likePost = (id) =>{
+  fetch("http://localhost:5000/like",{
+    method:"put",
+    headers:{
+      "Authorization" : "bearer "+localStorage.getItem('jwt'),
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify( {
+      postId:id
+    })
+  }).then(res => res.json())
+    .then((result)=>{
+      const newData = data.map((posts)=>{
+        if(posts._id == result._id){
+          return result;
+        }
+        else{
+          return posts
+        }
+      })
+      setData(newData)
+      console.log(result)
+    })
+}
+
+
+const unlikePost = (id) =>{
+  fetch("http://localhost:5000/unlike",{
+    method:"put",
+    headers:{
+      "Authorization" : "bearer "+localStorage.getItem('jwt'),
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify( {
+      postId:id
+    })
+  }).then(res => res.json())
+    .then((result)=>{
+      const newData = data.map((posts)=>{
+        if(posts._id == result._id){
+          return result;
+        }
+        else{
+          return posts
+        }
+      })
+      setData(newData)
+      console.log(result)
+    })
+}
+
   return (
     <section className='post-container' >
       <div className="post">
@@ -24,7 +77,11 @@ console.log(photo)
         <img src={photo} className='post-image' alt='profile'/>
         <div className="post-reactions">
             <div className='post-reactions-icons'>
-                <AiOutlineHeart  className='post-reaction-icon'/>
+              {
+                posts.likes.includes(JSON.parse(localStorage.getItem('user'))._id) ? <AiFillHeart className='post-reaction-icon' onClick={()=>unlikePost(_id)}/> :
+                        <AiOutlineHeart  className='post-reaction-icon' onClick={()=>likePost(_id)}/>
+              }
+                
                 <FaRegComment className='post-reaction-icon'/>
                 <ImCompass className='post-reaction-icon'/>
             </div>
@@ -32,7 +89,7 @@ console.log(photo)
                 <BiBookmark className='post-reaction-icon'/>
             </div>
         </div>
-        <h3><span>222</span> likes</h3>
+        <h3><span>{posts.likes.length}</span> likes</h3>
         <div className="post-description">
             <h3>ankam_hemanth</h3>
             <p>this is the description</p>

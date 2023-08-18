@@ -11,7 +11,7 @@ const requireLogin = require('../middlewares/requireLogin.js');
 //     console.log(salt); // the random salt string
 //   });
 router.get('/',(req,res)=>{
-    res.json({name : "Ruthik"});
+    // res.json({name : "Ruthik"});
 })
 
 
@@ -57,17 +57,17 @@ router.post('/login',(req,res)=>{
         
         const myPlaintextPassword = password;
         const hash = bcrypt.hashSync(myPlaintextPassword, 5);
-        console.log(hash);
+        // console.log(hash);
         // console.log(savedUser.password);
         bcrypt.compare(password, savedUser.password).then((match) => {
             if (match) {
                 // return res.status(200).json({ message: "Signed in Successfully" })
                 const token = jwt.sign({ _id: savedUser.id }, Jwt_secret)
-                // const { _id, name, email, userName } = savedUser
+                const { _id, name, email, userName } = savedUser
                 
-                res.json( token);
-                console.log(token);
-                // console.log({ token, user: { _id, name, email, userName } })
+                res.json({ token, user: { _id, name, email, userName } });
+                // console.log(token);
+                console.log({ token, user: { _id, name, email, userName } })
             } else {
                 return res.status(422).json({ error: "Invalid password" })
             }
